@@ -95,7 +95,13 @@ class CountDown:
         # TRY UNCOMMENTING ON OTHER MACHINES AND SEE IF IT WORKS.
         #print "\033[1;32;40m"
 
+	# Comment out if you don't want to center.
+	print "\n\n\n\n"
+
         while print_count < (self.scale * 8):
+
+	    # Comment out if you don't want to center.
+	    print "\t\t\t\t  ",
 
             # PRINT HOURS
             print self.numbers[hours_tens][print_count],
@@ -123,7 +129,8 @@ class CountDown:
             # AFTER PRINTING THE LAST ROW OF CHARACTERS
             if print_count == 8:
 
-                #CLEVER. (YES I MEAN HASHTAG CLEVER AND IT IS MEANT TO BE CLEVER)
+
+                # Make this what you want to scroll at the bottom.
                 scroll_txt = "     CYBER PATRIOT 2016 - ROUND 2 - HAZEL GREEN HIGH SCHOOL - CAPTAIN PARKER PIERCE " \
                              "EXPECTED TO LEAD HIS TEAM TO VICTORY - SKIPPER NELSON STAYS SILENT ON SEX SCANDAL - " \
                              "COACH CASE CORRECTS THE RECORD ON CLAP CONFUSION - WHILE BASHING LINUX, RATTY MAT SAID" \
@@ -138,6 +145,10 @@ class CountDown:
                 print ""
 
                 # PRINT IT
+
+		#Uncomment if you don't want to center.
+		print "\t\t\t\t  ",
+
                 print scroll_txt[self.char_count: self.char_count + 80]
                 self.char_count += 6
 
