@@ -7,6 +7,11 @@ class CountDown:
 
     def __init__(self):
 
+	try: sys.argv[1]
+	except IndexError:
+	    print "\nCorrect usage: ./pycounter (hour) (min) (sec)\n" 
+	    quit()
+
         # CHECKS FOR HELP REQUEST
         if sys.argv[1] == "help":
             print "\n./pycounter (hour) (min) (sec)\n"
